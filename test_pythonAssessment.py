@@ -46,6 +46,10 @@ def test_count_word_case_insensitive():
     assert count_word(words, "apple") == 3
 
 
+def test_most_common_empty():
+    assert most_common_word([]) == (None, 0)
+
+
 def test_average_word_length():
     words = ["a", "bb", "ccc"]  # lengths 1, 2, & 3. avg = 2.0
     assert average_word_length(words) == pytest.approx(2.0)
